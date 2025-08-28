@@ -1,0 +1,123 @@
+
+.home-container {
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 800px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    margin: 50px auto;
+}
+.content-row{
+    background-color: #A21654;
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 800px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    margin: 50px auto;
+}
+.profile-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.micro-icon {
+    font-size: 4rem;
+    color: #1F2676;
+    margin-bottom: 15px;
+}
+
+.welcome-message {
+    font-family: 'DM Serif Display', serif;
+    color: #A21654;
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+
+.content-row {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+    align-items: center;
+}
+
+.image-column, .text-column {
+    flex: 1;
+}
+
+.content-image {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.text-column {
+    color: white;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+
+.upload-label {
+    display: block;
+    color: white;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.pdf-input {
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px dashed #1F2676;
+    border-radius: 10px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.pdf-input:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.start-button {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: #A21654;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+.start-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.start-button-text{
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: #1F2676;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.start-button-text:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}

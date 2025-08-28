@@ -1,0 +1,145 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quiz-container {
+    background-color: #A21654;
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.score-display {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 8px 15px;
+    border-radius: 20px;
+}
+
+.question-container {
+    margin: 60px 0 40px;
+    text-align: center;
+}
+
+.question-container h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.8rem;
+    line-height: 1.4;
+}
+
+.answer-input {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.answer-input input {
+    flex-grow: 1;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+    color: #1F2676;
+}
+
+.answer-input input:focus {
+    outline: none;
+    background-color: white;
+}
+
+.answer-input button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    background: #1F2676;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.answer-input button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.feedback-popup {
+    position: fixed;
+    bottom: -100px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    transition: bottom 0.5s ease;
+}
+
+.feedback-content {
+    background-color: white;
+    padding: 15px 30px;
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.feedback-content span {
+    font-weight: 600;
+}
+
+.correct {
+    color: #2ecc71;
+}
+
+.incorrect {
+    color: #e74c3c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .quiz-container {
+        width: 95%;
+        padding: 30px;
+    }
+    
+    .question-container h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .quiz-container {
+        width: 100%;
+        border-radius: 0;
+        min-height: 100vh;
+    }
+    
+    .question-container {
+        margin: 50px 0 30px;
+    }
+    
+    .answer-input {
+        flex-direction: column;
+    }
+    
+    .answer-input button {
+        width: 100%;
+    }
+}

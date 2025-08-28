@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>GenTutor - Select Content</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../static/css/subject.css'>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../static/js/subject.js"></script>
+</head>
+<body>
+    <div class="selection-container">
+        <div class="sub-container">
+            <div class="dropdown-group">
+                <label for="subject-dropdown">Select Subject:</label>
+                <select id="subject-dropdown" class="styled-dropdown">
+                    <option value="">-- Choose a subject --</option>
+                    <option value="math">Mathematics</option>
+                    <option value="physics">Physics</option>
+                    <option value="chemistry">Chemistry</option>
+                    <option value="biology">Biology</option>
+                    <option value="history">History</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="sub-container">
+            <div class="dropdown-group">
+                <label for="unit-dropdown">Select Unit:</label>
+                <select id="unit-dropdown" class="styled-dropdown" disabled>
+                    <option value="">-- Select subject first --</option>
+                </select>
+            </div>
+        </div>
+        
+        <button id="select-button" class="select-button" disabled>Select</button>
+    </div>
+</body>
+</html>

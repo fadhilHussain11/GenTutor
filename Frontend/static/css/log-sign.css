@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+       
+}
+
+.form-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    width: 350px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);            
+}
+
+
+.title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #A21654;
+}
+
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #1F2676;
+}
+        
+
+input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    background-color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+        
+input:focus {
+    outline: none;
+    border-color: #A21654;
+    box-shadow: 0 0 0 3px rgba(162, 22, 84, 0.2);
+}
+
+.Enter-button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    background-color: #A21654;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+        
+.Enter-button:hover {
+    background-color: #8a1247;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(162, 22, 84, 0.3);
+}
+    
+.Enter-button:active {
+    transform: translateY(0);
+}
+
+
+.name-fields {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.half-width {
+    width: calc(50% - 8px);
+}
+.account-prompt {
+    color: #1F2676;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.account-prompt a {
+    color: #1F2676;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.account-prompt a:hover {
+    color: #1F2676;
+    text-decoration: underline;
+}
