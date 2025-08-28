@@ -28,12 +28,14 @@
             </div>>
         </div>
 
+        
         <div class="content-row">
-            <label for="pdf-upload" class="upload-label">Upload your syllabus</label>
-            <input type="file" id="pdf-upload" accept=".pdf" class="pdf-input">
+            <form action=" {{url_for('upload_syllabus')}} " method="POST" enctype="multipart/form-data">
+                <label for="pdf-upload" class="upload-label">Upload your syllabus</label>
+                <input type="file" id="pdf-upload" name="syllabus_files" accept=".pdf, image/*" class="pdf-input" multiple>
+                <button class="start-button" type="submit">Let's Start</button>
+            </form>
         </div>
-
-        <button class="start-button" onclick="window.location.href='subject.html'">Let's Start</button>
     </div>
 </body>
 </html>
