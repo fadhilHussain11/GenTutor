@@ -30,12 +30,13 @@
 
         
         <div class="content-row">
-            <form action=" {{url_for('upload_syllabus')}} " method="POST" enctype="multipart/form-data">
+            <form id="uploadForm" enctype="multipart/form-data">
                 <label for="pdf-upload" class="upload-label">Upload your syllabus</label>
                 <input type="file" id="pdf-upload" name="syllabus_files" accept=".pdf, image/*" class="pdf-input" multiple>
                 <button class="start-button" type="submit">Let's Start</button>
             </form>
         </div>
     </div>
+    <script src="{{ url_for('static',filename='js/home.js') }}"></script>
 </body>
 </html>

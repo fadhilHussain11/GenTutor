@@ -1,4 +1,4 @@
-import os,pytesseract
+import os,re,json,pytesseract
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 from PIL import Image
@@ -16,21 +16,27 @@ def extract_syllabus(syllabus_name):
     img = Image.open(file_path)
     Content_text = pytesseract.image_to_string(img)
     prompt = PromptTemplate(
-        input_variables=["content"],
-        template="""
+    input_variables=["content"],
+    template="""
         You are assistant that extract syllabus details into JSON format.
         Syllabus:
         {content}
 
-        Return as JSON with this structure:
+        Return only valid JSON. and only need units and its topics.Do not include ```,objectives,outcomes, or any explanation:
         {{
             "name": "..subject name...",
-            "unit..": [.....,.....,....],
-            "......": [.....,.....,....]
+            "unit..": .....,.....,....,
+            "......": .....,.....,....
         }}
         """
     )
     chain = prompt|llm
     text = chain.invoke({"content":Content_text})
-    print(text)
-    return text
+    content_text = text.content
+    clean_text = content_text.replace("```json", "").replace("```", "").strip()
+    data = json.loads(clean_text)
+    for key,value in data.items():
+        if key!='name':
+            data[key] = [t.strip() for t in re.split(r"—|-|,",value)]
+    print(data)
+    return data
