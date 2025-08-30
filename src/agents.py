@@ -33,6 +33,8 @@ def extract_syllabus(syllabus_name):
     chain = prompt|llm
     text = chain.invoke({"content":Content_text})
     content_text = text.content
+
+    return content_text
     clean_text = content_text.replace("```json", "").replace("```", "").strip()
     data = json.loads(clean_text)
     for key,value in data.items():

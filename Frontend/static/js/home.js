@@ -12,12 +12,9 @@ document.getElementById("uploadForm").addEventListener("submit",async function(e
     });
 
     let result = await response.json();
-    alert(result)
-
-    // Store result in localStorage to use in another page
-    localStorage.setItem("pdfTable", JSON.stringify(result.table));
+    alert(result["status"])
 
     // Redirect to result page
-    window.location.href = "/syllabus";
+    window.location.href = "/subject";
 
 });
